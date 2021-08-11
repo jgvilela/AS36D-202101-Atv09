@@ -1,5 +1,4 @@
 const axios = require('axios').default;
-const Promise = require('es6-promise').Promise;
 
 function postAllBooks() {
     return axios.post('http://localhost:3000/books', {
@@ -38,6 +37,5 @@ function getAllBooks() {
                 });
 } 
 
-Promisse.all([postAllBooks(),getAllBooks()])
-    .then((response) => {
-    });
+postAllBooks();
+getAllBooks();
